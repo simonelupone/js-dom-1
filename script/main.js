@@ -6,5 +6,11 @@ const body = document.querySelector('body');
 let isOn = false;
 switcher.addEventListener('click', () => {
     isOn = !isOn;
-    isOn ? light.src = './img/yellow_lamp.png' : light.src = './img/white_lamp.png';
+    if (isOn) {
+        light.src = './img/yellow_lamp.png';
+        switcher.innerHTML = 'Spegni';
+    } else {
+        light.src = './img/white_lamp.png';
+        switcher.innerHTML = 'Accendi';
+    }
 });
